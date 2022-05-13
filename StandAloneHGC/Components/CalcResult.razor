@@ -1,0 +1,32 @@
+﻿<h3>Calc Result</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Outcome</th>
+            <th>Odds</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Exactly @NumberYouWant</td>
+            <td>@HyperResult.OddsExacly.ToString("p")</td>
+        </tr>
+        <tr>
+            <td>@NumberYouWant or more </td>
+            <td>@HyperResult.OddsGreatorThanOrEq.ToString("p")</td>
+        </tr>
+        <tr>
+            <td>More than @NumberYouWant </td>
+            <td>@HyperResult.OddsGreatorThan.ToString("p")</td>
+        </tr>
+        <tr>
+            <td>@NumberYouWant or fewer</td>
+            <td>@HyperResult.OddsLessThanOrEq.ToString("p")</td>
+        </tr>
+        <tr>
+            <td>Fewer than @NumberYouWant</td>
+            <td>@HyperResult.OddsLessThan.ToString("p")</td>
+        </tr>
+    </tbody>
+</table>

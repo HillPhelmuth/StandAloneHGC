@@ -1,0 +1,31 @@
+﻿<div>
+    <RadzenTemplateForm Data=functionModel TItem=FunctionModel Submit=HandleValidSubmit>
+        <RadzenFieldset Text="Inputs">
+            <div class="inputs-grid">
+                <div>
+                    <RadzenLabel Text="Total Sample"></RadzenLabel>
+                    <RadzenNumeric @bind-Value=functionModel.Total></RadzenNumeric>
+                </div>
+                 <div>
+                    <RadzenLabel Text="Attempts"></RadzenLabel>
+                    <RadzenNumeric Name="Attempts" @bind-Value=functionModel.Attempts></RadzenNumeric>
+                    <RadzenCompareValidator Component="Attempts" Operator=CompareOperator.LessThanEqual Value=functionModel.Total Style="position: absolute"></RadzenCompareValidator>
+                </div>
+                 <div>
+                    <RadzenLabel Text="Successes in sample"></RadzenLabel>
+                    <RadzenNumeric Name="Success" @bind-Value=functionModel.Success></RadzenNumeric>
+                    <RadzenCompareValidator Component="Success" Operator=CompareOperator.LessThanEqual Value=functionModel.Total Style="position: absolute"></RadzenCompareValidator>
+                </div>
+                 <div>
+                    <RadzenLabel Text="Test Value"></RadzenLabel>
+                    <RadzenNumeric Name="Want" @bind-Value=functionModel.Want></RadzenNumeric>
+                    <RadzenCompareValidator Component="Want" Operator=CompareOperator.LessThanEqual Value=functionModel.Success Style="position: absolute"></RadzenCompareValidator>
+                    <RadzenCompareValidator Component="Want" Operator=CompareOperator.LessThanEqual Value=functionModel.Attempts Style="position: absolute"></RadzenCompareValidator>
+                </div>
+                <div>
+                    <RadzenButton ButtonType=ButtonType.Submit>Calculate</RadzenButton>
+                </div>
+            </div>
+        </RadzenFieldset>
+    </RadzenTemplateForm>
+</div>

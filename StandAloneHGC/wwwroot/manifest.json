@@ -1,0 +1,21 @@
+{
+  "name": "StandAloneHGC",
+  "short_name": "StandAloneHGC",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#F614A5FF",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/calc-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "icons/calc-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

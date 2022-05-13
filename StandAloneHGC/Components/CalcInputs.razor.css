@@ -1,0 +1,17 @@
+﻿@media (max-width: 640.98px) {
+    .inputs-grid{
+        display:grid;
+        width:90%;
+        margin-left:5%;
+        grid-template-columns:1fr;
+    }
+}
+
+@media (min-width: 641px) {
+    .inputs-grid {
+        display: grid;
+        width: 70%;
+        margin-left:15%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
